@@ -1,0 +1,10 @@
+extends ../layout
+
+block content
+
+  h1 PROFILE PAGE
+    if (user)
+      p You are currently logged in as #{user.username}
+    else
+      p
+        a(href='/accounts/login') Log In
