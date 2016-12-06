@@ -3,9 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "7.0.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon ./bin/www"
+    "start": "nf start",
+    "start:dev": "nf start --procfile Procfile.dev"
   },
   "repository": {
     "type": "git",
@@ -18,13 +22,19 @@
   },
   "homepage": "https://github.com/Moniarchy/lizardboard#readme",
   "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
     "body-parser": "~1.15.1",
     "cookie-parser": "~1.4.3",
+    "crypto": "0.0.3",
     "debug": "~2.2.0",
     "ejs": "^2.5.2",
     "express": "~4.13.4",
-    "mongoose": "^4.6.5",
+    "foreman": "^2.0.0",
+    "mongoose": "^4.6.6",
     "morgan": "~1.7.0",
+    "passport": "^0.3.2",
+    "passport-jwt": "^2.2.1",
+    "passport-local": "^1.0.0",
     "pug": "^2.0.0-beta6",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
