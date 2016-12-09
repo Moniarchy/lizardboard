@@ -1,7 +1,6 @@
 const mongoose = require('mongoose')
 const { Schema } = mongoose
 const User = require('./users')
-const { WidgetSchema } = require('./widgets')
 
 const DashboardSchema = new Schema ({
   name: { type: String, required: true, default: 'Company Dashboard' },
@@ -11,7 +10,6 @@ const DashboardSchema = new Schema ({
   responsive: { type: Boolean, required: true, default: true },
   created_at: { type: Date, required: true, default: Date.now },
   users: [{ type: Schema.Types.ObjectId, ref:'User' }],
-  widgets: [ WidgetSchema ]
 })
 
 const Dashboard = mongoose.model('Dashboard', DashboardSchema)

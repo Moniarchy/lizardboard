@@ -1,19 +1,91 @@
-# Lizardboard
+# 🐉 DragonBoard-Backend 🐲
 
 An open source clone of [geckoboard](https://www.geckoboard.com/). Interested in contributing? Take a look at the [project page](https://github.com/GuildCrafts/lizardboard/projects) and [issues page](https://github.com/GuildCrafts/lizardboard/issues) for outstanding issues.
 
-## Contributing to Lizardboard
+## Contributing to DragonBoard
 
 Please read the [contribution guidelines](https://github.com/GuildCrafts/lizardboard/blob/master/CONTRIBUTING.md)
 
-## Setting up Development Environment
+## Set up Development Environment with Homebrew
+```
+$ brew update
+```
 
-A mongodb database named lizardboard must be created prior to starting the application for the first time.
-- brew install yarn
-- brew install mongodb
-- Ensure `mongo` is running
-- yarn install
+### Install Yarn 🐈
+```
+$ brew install yarn
+```
+### Install Mongo
+```
+$ brew install mongodb
+$ brew services start mongodb
+```
 
+###### Create db directory
+```
+$ sudo mkdir -p /data/db
+```
+###### Set permissions for /data/db
+```
+$ sudo chown -R `id -un` /data/db
+```
+###### Run mongo daemon 😈
+```
+$ mongod
+```
+###### In another terminal window, create the db
+```
+$ mongo
+$ use lizardboard
+```
+###### Create a .env file in the root of the cloned repo and add
+```
+MONGODB_URI=mongodb://localhost/lizardboard
+SECRET='Put Your Secret Here'
+```
+###### Install all the things
+```
+$ yarn
+```
+###### Start the server! 🎉 🎉 🎉 !!!
+```
+$ yarn start
+```
+###### Seed the database
+```
+$ yarn seed
+```
+
+###### Create db directory
+```
+$ sudo mkdir -p /data/db
+```
+###### Set permissions for /data/db
+```
+$ sudo chown -R `id -un` /data/db
+```
+###### Run mongo daemon 😈
+```
+$ mongod
+```
+###### In another terminal window, create the db
+```
+$ mongo
+$ use lizardboard
+```
+###### Create a .env file in the root of the cloned repo and add
+```
+MONGODB_URI=mongodb://localhost/lizardboard
+SECRET='Put Your Secret Here'
+```
+###### Install all the things
+```
+$ yarn
+```
+##### Start the server! 🎉 🎉 🎉 !!!
+```
+$ yarn start
+```
 ## Technical Stack
 
 ### Back End
@@ -24,11 +96,10 @@ A mongodb database named lizardboard must be created prior to starting the appli
 
 ### Database
 - [Mongodb](https://docs.mongodb.com/)
- -[Mongoose](http://mongoosejs.com/docs/guide.html)
- -[Migrate-Mongoose](https://github.com/balmasi/migrate-mongoose)
+- [Mongoose](http://mongoosejs.com/docs/guide.html)
 
-## Front End
+### Front End
 - [React](https://facebook.github.io/react/)
 
-## Testing
-TBD
+### Testing
+- [Mocha](https://mochajs.org/)
