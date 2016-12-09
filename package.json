@@ -8,6 +8,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "seed": "node db/seed_collections.js",
     "start": "nf start",
     "start:dev": "nf start --procfile Procfile.dev"
   },
@@ -28,10 +29,13 @@
     "crypto": "0.0.3",
     "debug": "~2.2.0",
     "ejs": "^2.5.2",
+    "es6-promise": "^4.0.5",
     "express": "~4.13.4",
     "foreman": "^2.0.0",
+    "mongodb": "^2.2.12",
     "mongoose": "^4.6.6",
     "morgan": "~1.7.0",
+    "node-fetch": "^1.6.3",
     "passport": "^0.3.2",
     "passport-jwt": "^2.2.1",
     "passport-local": "^1.0.0",

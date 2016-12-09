@@ -1,13 +1,8 @@
-const mongoose = require('mongoose')
+const mongoose = require( 'mongoose' )
 const { Schema } = mongoose
 
-const WidgetSchema = new Schema ({
-  type: String,
-  title: String,
-  size: { type: Number, required: true },
-  contents: String
-})
+const WidgetSchema = new Schema({})
 
 const Widget = mongoose.model( 'Widget', WidgetSchema )
 
-module.exports = { WidgetSchema, Widget }
+module.exports = Widget
