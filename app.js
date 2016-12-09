@@ -5,7 +5,7 @@ const logger = require( 'morgan' )
 const cookieParser = require( 'cookie-parser' )
 const bodyParser = require( 'body-parser' )
 
-const api = require( './routes/api/manifest' ).v1
+const api = require( './routes/api/' ).v1
 
 const cors = require( './src/cors' )
 
@@ -25,6 +25,7 @@ app.use( express.static( path.join( __dirname, 'public' )))
 
 app.use( '/api/v1/dashboards', api.dashboards )
 app.use( '/api/v1/users', api.users )
+app.use( '/api/v1/widget_specifications', api.widget_specifications )
 
 app.use ( cors )
 
